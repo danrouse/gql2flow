@@ -34,10 +34,9 @@ export type GraphQLResponseErrorLocation = {
 
 const generateTypeName = name => `${name}`;
 
-const generateTypeDeclaration = (description, name, possibleTypes) => `${description && `/**
+const generateTypeDeclaration = (description, name, possibleTypes) => `${description ? `/**
   description: ${description}
-*/`}
-export type ${name} = ${possibleTypes};`;
+*/\n` : ''}export type ${name} = ${possibleTypes};`;
 
 const generateTypeNameDeclaration = (name) => `__typename: "${name}";\n`;
 
@@ -49,10 +48,9 @@ const generateInterfaceDeclaration = (description, declaration, fields, addition
 
 const generateEnumName = name => `${name}Enum`;
 
-const generateEnumDeclaration = (description, name, enumValues) => `${description && `/**
+const generateEnumDeclaration = (description, name, enumValues) => `${description ? `/**
 description: ${description}
-*/`}
-export type ${generateEnumName(name)} = ${enumValues.join(' | ')};`;
+*/\n` : ''}export type ${generateEnumName(name)} = ${enumValues.join(' | ')};`;
 
 /**
   * TODO

@@ -19,5 +19,4 @@ export type Query = {
   colorEnum?: ColorEnum;
 }
 
-null
 export type ColorEnum = "RED" | "GREEN" | "BLUE";
