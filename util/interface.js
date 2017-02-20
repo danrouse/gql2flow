@@ -39,12 +39,12 @@ const generateTypeDeclaration = (description, name, possibleTypes) => `${descrip
 */`}
 export type ${name} = ${possibleTypes};`;
 
-const typeNameDeclaration = '__typename: string;\n'
+const generateTypeNameDeclaration = (name) => `__typename: "${name}";\n`;
 
 const generateInterfaceDeclaration = (description, declaration, fields, additionalInfo, isInput) => `${additionalInfo}${description ? `/**
   description: ${description}
 */\n` : ''}export type ${declaration} = {
-  ${isInput ? '' : typeNameDeclaration}${fields}
+  ${isInput ? '' : generateTypeNameDeclaration(declaration)}${fields}
 }`;
 
 const generateEnumName = name => `${name}Enum`;
@@ -104,7 +104,7 @@ const fieldToDefinition = (field, isInput) => {
   }
 
   const description = field.description !== null ? `  /** ${field.description} */\n` : ``
-  
+
   return `${description}  ${fieldDef};`;
 }
 
