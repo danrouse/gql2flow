@@ -17,7 +17,7 @@ export type GraphQLResponseErrorLocation = {
 }
 
 export type Root = {
-  __typename: string;
+  __typename: "Root";
   allFilms?: FilmsConnection;
   film?: Film;
   allPeople?: PeopleConnection;
@@ -38,7 +38,7 @@ export type Root = {
   description: A connection to a list of items.
 */
 export type FilmsConnection = {
-  __typename: string;
+  __typename: "FilmsConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -61,7 +61,7 @@ full "{ edges { node } }" version should be used instead. */
   description: Information about pagination in a connection.
 */
 export type PageInfo = {
-  __typename: string;
+  __typename: "PageInfo";
   /** When paginating forwards, are there more items? */
   hasNextPage: boolean;
   /** When paginating backwards, are there more items? */
@@ -76,7 +76,7 @@ export type PageInfo = {
   description: An edge in a connection.
 */
 export type FilmsEdge = {
-  __typename: string;
+  __typename: "FilmsEdge";
   /** The item at the end of the edge */
   node?: Film;
   /** A cursor for use in pagination */
@@ -87,7 +87,7 @@ export type FilmsEdge = {
   description: A single film.
 */
 export type Film = {
-  __typename: string;
+  __typename: "Film";
   /** The title of this film. */
   title?: string;
   /** The episode number of this film. */
@@ -123,7 +123,7 @@ export type Node = Planet | Species | Starship | Vehicle | Person | Film;
 0 ABY.
 */
 export type Planet = {
-  __typename: string;
+  __typename: "Planet";
   /** The name of this planet. */
   name?: string;
   /** The diameter of this planet in kilometers. */
@@ -160,7 +160,7 @@ of water. */
   description: A connection to a list of items.
 */
 export type PlanetResidentsConnection = {
-  __typename: string;
+  __typename: "PlanetResidentsConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -183,7 +183,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type PlanetResidentsEdge = {
-  __typename: string;
+  __typename: "PlanetResidentsEdge";
   /** The item at the end of the edge */
   node?: Person;
   /** A cursor for use in pagination */
@@ -194,7 +194,7 @@ export type PlanetResidentsEdge = {
   description: An individual person or character within the Star Wars universe.
 */
 export type Person = {
-  __typename: string;
+  __typename: "Person";
   /** The name of this person. */
   name?: string;
   /** The birth year of the person, using the in-universe standard of BBY or ABY -
@@ -235,7 +235,7 @@ person does not have hair. */
   description: A connection to a list of items.
 */
 export type PersonFilmsConnection = {
-  __typename: string;
+  __typename: "PersonFilmsConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -258,7 +258,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type PersonFilmsEdge = {
-  __typename: string;
+  __typename: "PersonFilmsEdge";
   /** The item at the end of the edge */
   node?: Film;
   /** A cursor for use in pagination */
@@ -269,7 +269,7 @@ export type PersonFilmsEdge = {
   description: A type of person or character within the Star Wars Universe.
 */
 export type Species = {
-  __typename: string;
+  __typename: "Species";
   /** The name of this species. */
   name?: string;
   /** The classification of this species, such as "mammal" or "reptile". */
@@ -307,7 +307,7 @@ have skin. */
   description: A connection to a list of items.
 */
 export type SpeciesPeopleConnection = {
-  __typename: string;
+  __typename: "SpeciesPeopleConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -330,7 +330,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type SpeciesPeopleEdge = {
-  __typename: string;
+  __typename: "SpeciesPeopleEdge";
   /** The item at the end of the edge */
   node?: Person;
   /** A cursor for use in pagination */
@@ -341,7 +341,7 @@ export type SpeciesPeopleEdge = {
   description: A connection to a list of items.
 */
 export type SpeciesFilmsConnection = {
-  __typename: string;
+  __typename: "SpeciesFilmsConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -364,7 +364,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type SpeciesFilmsEdge = {
-  __typename: string;
+  __typename: "SpeciesFilmsEdge";
   /** The item at the end of the edge */
   node?: Film;
   /** A cursor for use in pagination */
@@ -375,7 +375,7 @@ export type SpeciesFilmsEdge = {
   description: A connection to a list of items.
 */
 export type PersonStarshipsConnection = {
-  __typename: string;
+  __typename: "PersonStarshipsConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -398,7 +398,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type PersonStarshipsEdge = {
-  __typename: string;
+  __typename: "PersonStarshipsEdge";
   /** The item at the end of the edge */
   node?: Starship;
   /** A cursor for use in pagination */
@@ -409,7 +409,7 @@ export type PersonStarshipsEdge = {
   description: A single transport craft that has hyperdrive capability.
 */
 export type Starship = {
-  __typename: string;
+  __typename: "Starship";
   /** The name of this starship. The common name, such as "Death Star". */
   name?: string;
   /** The model or official name of this starship. Such as "T-65 X-wing" or "DS-1
@@ -458,7 +458,7 @@ entire crew without having to resupply. */
   description: A connection to a list of items.
 */
 export type StarshipPilotsConnection = {
-  __typename: string;
+  __typename: "StarshipPilotsConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -481,7 +481,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type StarshipPilotsEdge = {
-  __typename: string;
+  __typename: "StarshipPilotsEdge";
   /** The item at the end of the edge */
   node?: Person;
   /** A cursor for use in pagination */
@@ -492,7 +492,7 @@ export type StarshipPilotsEdge = {
   description: A connection to a list of items.
 */
 export type StarshipFilmsConnection = {
-  __typename: string;
+  __typename: "StarshipFilmsConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -515,7 +515,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type StarshipFilmsEdge = {
-  __typename: string;
+  __typename: "StarshipFilmsEdge";
   /** The item at the end of the edge */
   node?: Film;
   /** A cursor for use in pagination */
@@ -526,7 +526,7 @@ export type StarshipFilmsEdge = {
   description: A connection to a list of items.
 */
 export type PersonVehiclesConnection = {
-  __typename: string;
+  __typename: "PersonVehiclesConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -549,7 +549,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type PersonVehiclesEdge = {
-  __typename: string;
+  __typename: "PersonVehiclesEdge";
   /** The item at the end of the edge */
   node?: Vehicle;
   /** A cursor for use in pagination */
@@ -560,7 +560,7 @@ export type PersonVehiclesEdge = {
   description: A single transport craft that does not have hyperdrive capability
 */
 export type Vehicle = {
-  __typename: string;
+  __typename: "Vehicle";
   /** The name of this vehicle. The common name, such as "Sand Crawler" or "Speeder
 bike". */
   name?: string;
@@ -600,7 +600,7 @@ entire crew without having to resupply. */
   description: A connection to a list of items.
 */
 export type VehiclePilotsConnection = {
-  __typename: string;
+  __typename: "VehiclePilotsConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -623,7 +623,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type VehiclePilotsEdge = {
-  __typename: string;
+  __typename: "VehiclePilotsEdge";
   /** The item at the end of the edge */
   node?: Person;
   /** A cursor for use in pagination */
@@ -634,7 +634,7 @@ export type VehiclePilotsEdge = {
   description: A connection to a list of items.
 */
 export type VehicleFilmsConnection = {
-  __typename: string;
+  __typename: "VehicleFilmsConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -657,7 +657,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type VehicleFilmsEdge = {
-  __typename: string;
+  __typename: "VehicleFilmsEdge";
   /** The item at the end of the edge */
   node?: Film;
   /** A cursor for use in pagination */
@@ -668,7 +668,7 @@ export type VehicleFilmsEdge = {
   description: A connection to a list of items.
 */
 export type PlanetFilmsConnection = {
-  __typename: string;
+  __typename: "PlanetFilmsConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -691,7 +691,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type PlanetFilmsEdge = {
-  __typename: string;
+  __typename: "PlanetFilmsEdge";
   /** The item at the end of the edge */
   node?: Film;
   /** A cursor for use in pagination */
@@ -702,7 +702,7 @@ export type PlanetFilmsEdge = {
   description: A connection to a list of items.
 */
 export type FilmSpeciesConnection = {
-  __typename: string;
+  __typename: "FilmSpeciesConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -725,7 +725,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type FilmSpeciesEdge = {
-  __typename: string;
+  __typename: "FilmSpeciesEdge";
   /** The item at the end of the edge */
   node?: Species;
   /** A cursor for use in pagination */
@@ -736,7 +736,7 @@ export type FilmSpeciesEdge = {
   description: A connection to a list of items.
 */
 export type FilmStarshipsConnection = {
-  __typename: string;
+  __typename: "FilmStarshipsConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -759,7 +759,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type FilmStarshipsEdge = {
-  __typename: string;
+  __typename: "FilmStarshipsEdge";
   /** The item at the end of the edge */
   node?: Starship;
   /** A cursor for use in pagination */
@@ -770,7 +770,7 @@ export type FilmStarshipsEdge = {
   description: A connection to a list of items.
 */
 export type FilmVehiclesConnection = {
-  __typename: string;
+  __typename: "FilmVehiclesConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -793,7 +793,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type FilmVehiclesEdge = {
-  __typename: string;
+  __typename: "FilmVehiclesEdge";
   /** The item at the end of the edge */
   node?: Vehicle;
   /** A cursor for use in pagination */
@@ -804,7 +804,7 @@ export type FilmVehiclesEdge = {
   description: A connection to a list of items.
 */
 export type FilmCharactersConnection = {
-  __typename: string;
+  __typename: "FilmCharactersConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -827,7 +827,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type FilmCharactersEdge = {
-  __typename: string;
+  __typename: "FilmCharactersEdge";
   /** The item at the end of the edge */
   node?: Person;
   /** A cursor for use in pagination */
@@ -838,7 +838,7 @@ export type FilmCharactersEdge = {
   description: A connection to a list of items.
 */
 export type FilmPlanetsConnection = {
-  __typename: string;
+  __typename: "FilmPlanetsConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -861,7 +861,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type FilmPlanetsEdge = {
-  __typename: string;
+  __typename: "FilmPlanetsEdge";
   /** The item at the end of the edge */
   node?: Planet;
   /** A cursor for use in pagination */
@@ -872,7 +872,7 @@ export type FilmPlanetsEdge = {
   description: A connection to a list of items.
 */
 export type PeopleConnection = {
-  __typename: string;
+  __typename: "PeopleConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -895,7 +895,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type PeopleEdge = {
-  __typename: string;
+  __typename: "PeopleEdge";
   /** The item at the end of the edge */
   node?: Person;
   /** A cursor for use in pagination */
@@ -906,7 +906,7 @@ export type PeopleEdge = {
   description: A connection to a list of items.
 */
 export type PlanetsConnection = {
-  __typename: string;
+  __typename: "PlanetsConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -929,7 +929,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type PlanetsEdge = {
-  __typename: string;
+  __typename: "PlanetsEdge";
   /** The item at the end of the edge */
   node?: Planet;
   /** A cursor for use in pagination */
@@ -940,7 +940,7 @@ export type PlanetsEdge = {
   description: A connection to a list of items.
 */
 export type SpeciesConnection = {
-  __typename: string;
+  __typename: "SpeciesConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -963,7 +963,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type SpeciesEdge = {
-  __typename: string;
+  __typename: "SpeciesEdge";
   /** The item at the end of the edge */
   node?: Species;
   /** A cursor for use in pagination */
@@ -974,7 +974,7 @@ export type SpeciesEdge = {
   description: A connection to a list of items.
 */
 export type StarshipsConnection = {
-  __typename: string;
+  __typename: "StarshipsConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -997,7 +997,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type StarshipsEdge = {
-  __typename: string;
+  __typename: "StarshipsEdge";
   /** The item at the end of the edge */
   node?: Starship;
   /** A cursor for use in pagination */
@@ -1008,7 +1008,7 @@ export type StarshipsEdge = {
   description: A connection to a list of items.
 */
 export type VehiclesConnection = {
-  __typename: string;
+  __typename: "VehiclesConnection";
   /** Information to aid in pagination. */
   pageInfo: PageInfo;
   /** Information to aid in pagination. */
@@ -1031,7 +1031,7 @@ full "{ edges { node } }" version should be used instead. */
   description: An edge in a connection.
 */
 export type VehiclesEdge = {
-  __typename: string;
+  __typename: "VehiclesEdge";
   /** The item at the end of the edge */
   node?: Vehicle;
   /** A cursor for use in pagination */

@@ -17,7 +17,7 @@ export type GraphQLResponseErrorLocation = {
 }
 
 export type Query = {
-  __typename: string;
+  __typename: "Query";
   colorEnum?: ColorEnum;
 }
 
